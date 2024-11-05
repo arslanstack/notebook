@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\MediaCategoryController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\DB;
 
@@ -50,12 +51,18 @@ Route::group(['prefix'  =>  'admin'], function () {
 		Route::get('change_password', [AdminController::class, 'change_password'])->middleware('auth:admin');
 		Route::post('update_password', [AdminController::class, 'update_password'])->middleware('auth:admin');
 
-
-		
 		Route::group(['prefix'  =>  'users'], function () {
 			Route::get('/', [UserController::class, 'index']);
 			Route::post('/update_statuses', [UserController::class, 'update_status']);
 			Route::get('detail/{id}', [UserController::class, 'details']);
+		});
+
+		Route::group(['prefix'  =>  'media-categories'], function () {
+			Route::get('/', [MediaCategoryController::class, 'index']);
+			Route::post('/store', [MediaCategoryController::class, 'store']);
+			Route::post('/show', [MediaCategoryController::class, 'show']);
+			Route::post('/update', [MediaCategoryController::class, 'update']);
+			Route::post('/delete', [MediaCategoryController::class, 'delete']);
 		});
 	});
 });

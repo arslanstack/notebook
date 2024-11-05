@@ -24,6 +24,9 @@
             <li class="{{ Request::is('admin/users') ? 'active' : '' }} {{ Request::is('admin/users/*') ? 'active' : '' }}">
                 <a href="{{ url('admin/users') }}"><i class="fa-solid fa-users"></i> <span class="nav-label">Users</span></a>
             </li>
+            <li class="{{ Request::is('admin/media-categories') ? 'active' : '' }} {{ Request::is('admin/media-categories/*') ? 'active' : '' }}">
+                <a href="{{ url('admin/media-categories') }}"><i class="fa-solid fa-tags"></i> <span class="nav-label">Media Categories</span></a>
+            </li>
         </ul>
     </div>
 </nav>

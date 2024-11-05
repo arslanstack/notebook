@@ -218,6 +218,24 @@ if (!function_exists('count_records')) {
 		return $query->count();
 	}
 }
+if (!function_exists('slugify')) {
+	function slugify($title)
+	{
+		// Replace non-alphanumeric characters with a dash
+		$slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $title);
+		$slug = strtolower(trim($slug, '-'));
+
+		// Check for existing slugs in the MediaConsumptionCategory model
+		$originalSlug = $slug;
+		$counter = 1;
+
+		while (\App\Models\MediaConsumptionCategory::where('slug', $slug)->exists()) {
+			$slug = $originalSlug . '-' . $counter++;
+		}
+
+		return $slug;
+	}
+}
 if (! function_exists('send_email')) {
 	function send_email($mail_data, $subject, $email)
 	{
