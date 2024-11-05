@@ -104,7 +104,7 @@ class AuthController extends Controller
             return response()->json(['msg' => 'error', 'response' => 'User not found.'], 404);
         }
 
-        $newPassword = $user->username . rand(100000, 999999);
+        $newPassword = str_replace(' ', '', $user->name) . rand(100000, 999999);
 
         $user->password = bcrypt($newPassword);
         $query = $user->save();
@@ -113,18 +113,18 @@ class AuthController extends Controller
             $maildata = [
                 'name' => $user->name,
                 'email' => $user->email,
-                'password' => $newPassword
+                'body' => 'Your password has been reset, Please use new password for logging in. Your new password is ' . $newPassword 
             ];
 
             $headers = "From: webmaster@example.com\r\n";
             $headers .= "Reply-To: webmaster@example.com\r\n";
             $headers .= "Content-Type: text/html\r\n";
-            $subject = 'Password Reset Request';
-            $emailTemplate = view('emails.reset', compact(['maildata']))->render();
-            $sendMail = mail($user->email, $subject, $emailTemplate, $headers);
+            $subject = 'Your password has been reset.';
+            $emailTemplate = view('emails.template_one', compact(['maildata']))->render();
+            $sendMail = mail($request->email, $subject, $emailTemplate, $headers);
 
             if (!$sendMail) {
-                return response()->json(['msg' => 'error', 'response' => 'Could not send email.'], 400);
+                return response()->json(['msg' => 'error', 'response' => 'Could not send reset password email.'], 400);
             }
 
             return response()->json(['msg' => 'success', 'response' => 'Please check your inbox on registered email address to access your account and further instructions.'], 200);
