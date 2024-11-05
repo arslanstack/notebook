@@ -19,13 +19,13 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string',
-            'c_password' => 'required| min:6 |string|same:password',
+            'confirm_password' => 'required| min:6 |string|same:password',
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400);
         }
-        
+
         $user = new User();
         $user->name = $request->name;
         $user->phone = $request->phone ?? null;
@@ -34,21 +34,23 @@ class AuthController extends Controller
         $query = $user->save();
         if ($query) {
 
-            // $maildata = [
-            //     'name' => $user->name ,
-            //     'email' => $user->email,
-            //     'password' => $request->password
-            // ];
+            $maildata = [
+                'name' => $user->name,
+                'email' => $user->email,
+                'body' => 'Thank you for registering with us. Your account has been created successfully.'
+            ];
+            $subject = 'Thank you for creating an account.';
 
-            // $headers = "From: webmaster@example.com\r\n";
-            // $headers .= "Reply-To: webmaster@example.com\r\n";
-            // $headers .= "Content-Type: text/html\r\n";
-            // $subject = 'Welcome to Laravel 11';
-            // $emailTemplate = view('emails.welcome', compact(['maildata']))->render();
-            // $sendMail = mail($request->email, $subject, $emailTemplate, $headers);
-            // if (!$sendMail) {
-                // return response()->json(['msg' => 'error', 'response' => 'Could not send email.'], 400);
-            // }
+            $headers = "From: webmaster@example.com\r\n";
+            $headers .= "Reply-To: webmaster@example.com\r\n";
+            $headers .= "Content-Type: text/html\r\n";
+            $subject = 'Thankyou for creating an account.';
+            $emailTemplate = view('emails.template_one', compact(['maildata']))->render();
+            $sendMail = mail($request->email, $subject, $emailTemplate, $headers);
+            if (!$sendMail) {
+                dd('Could not send email.');
+            }
+
             $credentials = $request->only('email', 'password');
 
             if (!$token = JWTAuth::attempt($credentials)) {
@@ -59,7 +61,7 @@ class AuthController extends Controller
         }
         return response()->json(['msg' => 'error', 'response' => 'Something went wrong. Could not create an account.'], 400);
     }
-    
+
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
