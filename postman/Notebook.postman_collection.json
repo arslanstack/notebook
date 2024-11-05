@@ -1,0 +1,5670 @@
+{
+	"info": {
+		"_postman_id": "9886f5d4-9cd7-45e2-bfdc-eea69c0dd465",
+		"name": "Notebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37720134"
+	},
+	"item": [
+		{
+			"name": "API Auth",
+			"item": [
+				{
+					"name": "Exchange Acc. Simple Register",
+					"item": [
+						{
+							"name": "Register Exchange Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fname",
+											"value": "Raymond",
+											"type": "text"
+										},
+										{
+											"key": "lname",
+											"value": "Reddington",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Director Operations",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "red@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+14567199881",
+											"type": "text"
+										},
+										{
+											"key": "fax",
+											"value": "+14567199881",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "Transport Inrants",
+											"type": "text"
+										},
+										{
+											"key": "company_type",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_1",
+											"value": "Joshua Street",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_2",
+											"value": "5th Avenue",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Los Angeles",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "California",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "United States",
+											"type": "text"
+										},
+										{
+											"key": "zip",
+											"value": "90001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/user/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Premium Acc. Register",
+					"item": [
+						{
+							"name": "Register Premium Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fname",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "lname",
+											"value": "Doe",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Assistant Director",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "john@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "company_phone",
+											"value": "+14567189283",
+											"type": "text"
+										},
+										{
+											"key": "company_mobile",
+											"value": "+14567189176",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "Premium Logistics",
+											"type": "text"
+										},
+										{
+											"key": "company_type",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_1",
+											"value": "981 Ricford Ave",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_2",
+											"value": "Queens",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "New York City",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "New York",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "United States",
+											"type": "text"
+										},
+										{
+											"key": "zip",
+											"value": "11011",
+											"type": "text"
+										},
+										{
+											"key": "website",
+											"value": "https://premiumlogs.com",
+											"type": "text"
+										},
+										{
+											"key": "drivers",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "motor_carrier_no",
+											"value": "162781",
+											"type": "text"
+										},
+										{
+											"key": "dot_no",
+											"value": "183726",
+											"type": "text"
+										},
+										{
+											"key": "insurance_company",
+											"value": "Dorlq Simmit",
+											"type": "text"
+										},
+										{
+											"key": "gen_liability",
+											"value": "89000",
+											"type": "text"
+										},
+										{
+											"key": "cargo_insurance",
+											"value": "671928",
+											"type": "text"
+										},
+										{
+											"key": "other_insurance",
+											"value": "8912",
+											"type": "text"
+										},
+										{
+											"key": "insurance_declaration",
+											"type": "file",
+											"src": "/C:/Users/being/Downloads/arslan-ats-resume.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/user/premium-register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"user",
+										"premium-register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Billing Info",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "company_id",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "card_number",
+											"value": "4242424242424242",
+											"type": "text"
+										},
+										{
+											"key": "cvv",
+											"value": "124",
+											"type": "text"
+										},
+										{
+											"key": "expiry_month",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "expiry_year",
+											"value": "2025",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/user/premium-billing-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"user",
+										"premium-billing-info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Home Page Quote & Register",
+					"item": [
+						{
+							"name": "Homepage Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pickup_date",
+											"value": "2024-12-12",
+											"type": "text"
+										},
+										{
+											"key": "pickup_time",
+											"value": "1200",
+											"type": "text"
+										},
+										{
+											"key": "pickup_zip",
+											"value": "10001",
+											"type": "text"
+										},
+										{
+											"key": "delivery_zip",
+											"value": "10002",
+											"type": "text"
+										},
+										{
+											"key": "delivery_time",
+											"value": "1600",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "12x12x12 inches",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "5 lbs",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Mustard Gas",
+											"type": "text"
+										},
+										{
+											"key": "fname",
+											"value": "Irfan",
+											"type": "text"
+										},
+										{
+											"key": "lname",
+											"value": "Junejo",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "sceneonhai@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+18917263511",
+											"type": "text"
+										},
+										{
+											"key": "company_name",
+											"value": "Robocop inc.",
+											"type": "text"
+										},
+										{
+											"key": "your_zip",
+											"value": "10001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/user/homepage-register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"user",
+										"homepage-register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Refresh",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/auth/user/refresh",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "john@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/forgot",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me/Profile",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "c_new_password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/updatePassword",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "Jack",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "Sparrow",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Assistant Manager",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ysheldon@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+1234516787",
+									"type": "text"
+								},
+								{
+									"key": "fax",
+									"value": "+1234516787",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/updateProfile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "red@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard Stats",
+			"item": [
+				{
+					"name": "Quote Request Count",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/home-stats/quote-request-count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"home-stats",
+								"quote-request-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RFP Count",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/home-stats/rfps-count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"home-stats",
+								"rfps-count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quote Requests",
+			"item": [
+				{
+					"name": "Add Quote Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pickup_date",
+									"value": "2024-08-29",
+									"type": "text"
+								},
+								{
+									"key": "start_point",
+									"value": "10001, New York, NY",
+									"type": "text"
+								},
+								{
+									"key": "delivery_point",
+									"value": "15470, Ohiopyle, PA",
+									"type": "text"
+								},
+								{
+									"key": "pickup_time",
+									"value": "1600",
+									"type": "text"
+								},
+								{
+									"key": "delivery_time",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "dimensions",
+									"value": "12x12x12 ft",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem Ipsum Dolor Simit",
+									"type": "text"
+								},
+								{
+									"key": "vehicle",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lift_gate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "Ola Amista",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "red@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/quote-request/submit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Quote Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "zip",
+									"value": "10001",
+									"type": "text"
+								},
+								{
+									"key": "radius",
+									"value": "120",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/quote-request/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Quote Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pickup_date",
+									"value": "2023-12-12",
+									"type": "text"
+								},
+								{
+									"key": "pickup_time",
+									"value": "14591",
+									"type": "text"
+								},
+								{
+									"key": "start_point",
+									"value": "10002, Knickerbocker, NY",
+									"type": "text"
+								},
+								{
+									"key": "delivery_point",
+									"value": "15470, Ohiopyle, PA",
+									"type": "text"
+								},
+								{
+									"key": "pickup_time",
+									"value": "1600",
+									"type": "text"
+								},
+								{
+									"key": "delivery_time",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "dimensions",
+									"value": "12x12x12 ft",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Radio-active Waste",
+									"type": "text"
+								},
+								{
+									"key": "vehicle",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lift_gate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "Muhammad Haris",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "mharis@outlook.com",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "7163241919",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/quote-request/updateRequest",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"updateRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address Quote Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "pickup_address_1",
+									"value": "Suite 105, Tashker Hotel",
+									"type": "text"
+								},
+								{
+									"key": "pickup_address_2",
+									"value": "Long Island",
+									"type": "text"
+								},
+								{
+									"key": "pickup_city",
+									"value": "New York City",
+									"type": "text"
+								},
+								{
+									"key": "pickup_state",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "pickup_zip",
+									"value": "10002",
+									"type": "text"
+								},
+								{
+									"key": "pickup_contact_name",
+									"value": "Raju Mehta",
+									"type": "text"
+								},
+								{
+									"key": "pickup_contact_phone",
+									"value": "+14567812312",
+									"type": "text"
+								},
+								{
+									"key": "pickup_company",
+									"value": "Soft Rubber Solutions",
+									"type": "text"
+								},
+								{
+									"key": "delivery_address_1",
+									"value": "Alpha Store",
+									"type": "text"
+								},
+								{
+									"key": "delivery_address_2",
+									"value": "Roma Barista Avenue",
+									"type": "text"
+								},
+								{
+									"key": "delivery_city",
+									"value": "Ohiopyle",
+									"type": "text"
+								},
+								{
+									"key": "delivery_state",
+									"value": "Pennsylvania",
+									"type": "text"
+								},
+								{
+									"key": "delivery_zip",
+									"value": "15470",
+									"type": "text"
+								},
+								{
+									"key": "delivery_contact_name",
+									"value": "Harold Cooper",
+									"type": "text"
+								},
+								{
+									"key": "delivery_contact_phone",
+									"value": "+!9871230908",
+									"type": "text"
+								},
+								{
+									"key": "delivery_company",
+									"value": "FBI Black Site Ops",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/quote-request/updateAddress",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"updateAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Auth User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-request/allByUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"allByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Quote Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-request/show/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-request/allByCompany/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-request",
+								"allByCompany",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quote Bids",
+			"item": [
+				{
+					"name": "Submit Bid on Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "request_id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "contact_fname",
+									"value": "Joshua",
+									"type": "text"
+								},
+								{
+									"key": "contact_lname",
+									"value": "Cooper",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+15613451289",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "jasper@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "terms",
+									"value": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/quote-bids/submit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-bids",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids On A Requests",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-bids/allOnRequest/10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-bids",
+								"allOnRequest",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids By Auth User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-bids/allByUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-bids",
+								"allByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids By Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/quote-bids/allByCompany/17",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quote-bids",
+								"allByCompany",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recurring Freight Posting",
+			"item": [
+				{
+					"name": "Add RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "route_type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "multiple_routes",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "lift_gate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start_point",
+									"value": "10001, New York, NY",
+									"type": "text"
+								},
+								{
+									"key": "delivery_point",
+									"value": "90001, Firestone Pk, CA",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem Ipsum Dolor Simit",
+									"type": "text"
+								},
+								{
+									"key": "monday",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tuesday",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "wednesday",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "thursday",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "friday",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "saturday",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sunday",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "frequency",
+									"value": "weekly",
+									"type": "text"
+								},
+								{
+									"key": "insurance_coverage",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "payment_terms",
+									"value": "Payme",
+									"type": "text"
+								},
+								{
+									"key": "bid_per_stop",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "bid_per_route",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_requirements",
+									"value": "Lorem Ipsum Dolor Simit",
+									"type": "text"
+								},
+								{
+									"key": "bid_due",
+									"value": "2023-06-06",
+									"type": "text"
+								},
+								{
+									"key": "recipients",
+									"value": "abc@gmail.com;def@gmail.com;ghi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "contact_company",
+									"value": "Evil Corps.",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "Raymond Red Reddington",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+!4567812309",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "reddington@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "doc_1",
+									"type": "file",
+									"src": "/C:/Users/being/Downloads/Premium Logistics1721646590.pdf"
+								},
+								{
+									"key": "doc_2",
+									"type": "file",
+									"src": "/C:/Users/being/Downloads/Premium Logistics1721646590.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rfps/submit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_city",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "start_state",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "start_zip",
+									"value": "10001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "radius",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "vehicle_type",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rfps/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rfp_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "route_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "multiple_routes",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "lift_gate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start_point",
+									"value": "10001, New York, NY",
+									"type": "text"
+								},
+								{
+									"key": "delivery_point",
+									"value": "90001, Firestone Pk, CA",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem Ipsum Dolor Simit",
+									"type": "text"
+								},
+								{
+									"key": "monday",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tuesday",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "wednesday",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "thursday",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "friday",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "saturday",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sunday",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "frequency",
+									"value": "weekly",
+									"type": "text"
+								},
+								{
+									"key": "insurance_coverage",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "payment_terms",
+									"value": "Payme",
+									"type": "text"
+								},
+								{
+									"key": "bid_per_stop",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "bid_per_route",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_requirements",
+									"value": "Lorem Ipsum Dolor Simit",
+									"type": "text"
+								},
+								{
+									"key": "bid_due",
+									"value": "2023-06-06",
+									"type": "text"
+								},
+								{
+									"key": "recipients",
+									"value": "abc@gmail.com;def@gmail.com;ghi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "contact_company",
+									"value": "Evil Corps.",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "Yushua Goods",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+!4567812310",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "reddington@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "doc_1",
+									"type": "file",
+									"src": "/C:/Users/being/Downloads/1.1 Project Page.pdf"
+								},
+								{
+									"key": "doc_2",
+									"type": "file",
+									"src": "/C:/Users/being/Downloads/1.1 Project Page.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rfps/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show One RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfps/show/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Auth User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfps/allByUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"allByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfps/allByCompany/19",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfps",
+								"allByCompany",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RFP Bids",
+			"item": [
+				{
+					"name": "Submit Bid on RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rfp_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "Joshua",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+15613451289",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "jasper@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "terms",
+									"value": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rfp-bids/submit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfp-bids",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids On A RFP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfp-bids/allOnRFP/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfp-bids",
+								"allOnRFP",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids By Auth User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfp-bids/allByUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfp-bids",
+								"allByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids By Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rfp-bids/allByCompany/18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rfp-bids",
+								"allByCompany",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users Management",
+			"item": [
+				{
+					"name": "Create New User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "kohey12342@ikangou.com",
+									"type": "text"
+								},
+								{
+									"key": "c_email",
+									"value": "kohey12342@ikangou.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "is_major_user",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "has_acc_info",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "has_post_func",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "has_alerts",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user-management/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Permission",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+17652349879",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_major_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "has_acc_info",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "has_post_func",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "has_alerts",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user-management/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Phone",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+15461239878",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user-management/updatePhone",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"updatePhone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user-management/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset User Pswd",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user-management/resetPassword/16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"resetPassword",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Users in Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user-management/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Single User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user-management/show/16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-management",
+								"show",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company Management",
+			"item": [
+				{
+					"name": "Update Alerts Emails",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "alert_email_1",
+									"value": "polo981@modotso.com",
+									"type": "text"
+								},
+								{
+									"key": "alert_email_2",
+									"value": "ceyeje5833@modotso.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company-management/updateAlerts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company-management",
+								"updateAlerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Alert Preferences",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "alert_freight",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "alert_vehicle",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "alert_rpf",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "alert_driver",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company-management/updateAlertPref",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company-management",
+								"updateAlertPref"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auth Company Info",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/company-management/getCompanyInfo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company-management",
+								"getCompanyInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Auth Company Info",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mecernan Motors",
+									"type": "text"
+								},
+								{
+									"key": "mail_address_1",
+									"value": "99 East Nobel Boulevard",
+									"type": "text"
+								},
+								{
+									"key": "mail_address_2",
+									"value": "Debitis accusamus au",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Debitis voluptas dui",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Missouri",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "62970",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "+15461239878",
+									"type": "text"
+								},
+								{
+									"key": "company_type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "motor_carrier_no",
+									"value": "987654",
+									"type": "text"
+								},
+								{
+									"key": "dot_no",
+									"value": "234561",
+									"type": "text"
+								},
+								{
+									"key": "intrastate_no",
+									"value": "527312",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company-management/updateCompanyInfo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company-management",
+								"updateCompanyInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Credit Card",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_number",
+									"value": "4242424242424242",
+									"type": "text"
+								},
+								{
+									"key": "cvv",
+									"value": "951",
+									"type": "text"
+								},
+								{
+									"key": "expiry_month",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "expiry_year",
+									"value": "2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company-management/updateCreditCard",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company-management",
+								"updateCreditCard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airports",
+			"item": [
+				{
+					"name": "Get Airports",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/airports/getAll",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Airport Details",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/airports/getOne/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"getOne",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Airports",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/airports/getCompanyAirports",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"getCompanyAirports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Airports Details",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/airports/getCompanyAirportDetails/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"getCompanyAirportDetails",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Airport to Company Operation",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "airport_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/airports/addAirportToCompany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"addAirportToCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Operation Status for Company Airport",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "airport_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/airports/updateAirportOperationStatus",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"airports",
+								"updateAirportOperationStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company Warehouses",
+			"item": [
+				{
+					"name": "Get All Company Warehouse",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/warehouses/getCompanyWarehouses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"getCompanyWarehouses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Warehouse Details",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/warehouses/getWarehouseDetails/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"getWarehouseDetails",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Company Warehouse",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alpha Warehouses",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "New York City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "United States",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "10003",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/warehouses/addWarehouse",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"addWarehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company Warehouse",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Alpha Warehouses",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "New York City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "United States",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "10003",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/warehouses/updateWarehouse",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"updateWarehouse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search Company",
+			"item": [
+				{
+					"name": "Get All Company Warehouse",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/warehouses/getCompanyWarehouses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"getCompanyWarehouses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Company Warehouse",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alpha Warehouses",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "New York City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "United States",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "10003",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/warehouses/addWarehouse",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses",
+								"addWarehouse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filing Cabinet",
+			"item": [
+				{
+					"name": "Add Post To Cabinet",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "4",
+									"description": "id of the record that needs to be added to cabinet",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"description": "0: company, 1: quote_Request, 2:vehicle, 3: rfps",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Los Angeles",
+									"description": "File under this city",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "California",
+									"description": "File under this state",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "",
+									"description": "Nullable so leave empty if not used",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/addPostToCabinet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"addPostToCabinet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Note To Filings",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filings",
+									"value": "[2,3]",
+									"description": "array containing id of all the filings that you want to add note to",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"description": "Text you want to add as a note",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"description": "Filing Type Tab e.g. 0: company, 1: quote_Request, 2:vehicle, 3: rfps So can return appropriate records back",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/addNoteToFilings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"addNoteToFilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Filings From Cabinet",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filings",
+									"value": "[3]",
+									"description": "array containing id of all the filings that you want to delete",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"description": "Filing Type Tab e.g. 0: company, 1: quote_Request, 2:vehicle, 3: rfps So can return appropriate records back",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/deleteFilings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"deleteFilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Filings",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/getCompanyFilings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"getCompanyFilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Quote Filings",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/getQuoteFilings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"getQuoteFilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RFP Filings",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/filing-cabinet/getRFPFilings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"filing-cabinet",
+								"getRFPFilings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle Post",
+			"item": [
+				{
+					"name": "Post a Vehicle Available",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date_available",
+									"value": "22-08-2024",
+									"description": "Date of Availability for the trip",
+									"type": "text"
+								},
+								{
+									"key": "route_type",
+									"value": "0",
+									"description": "on demand 0 or scheduled 1",
+									"type": "text"
+								},
+								{
+									"key": "start_city",
+									"value": "Manhattan",
+									"description": "City",
+									"type": "text"
+								},
+								{
+									"key": "start_state",
+									"value": "New York",
+									"description": "State",
+									"type": "text"
+								},
+								{
+									"key": "start_zip",
+									"value": "10001",
+									"description": "zip",
+									"type": "text"
+								},
+								{
+									"key": "departure",
+									"value": "1400",
+									"description": "1400 hrs means 2pm",
+									"type": "text"
+								},
+								{
+									"key": "stops",
+									"value": "[{\"city\": \"New York\", \"state\": \"New York\", \"zip\": \"10012\", \"arrival\": \"1600\"}, {\"city\": \"Philadelphia\", \"state\": \"Pennsylvania\", \"zip\": \"19107\", \"arrival\": \"1800\"}]",
+									"description": "stops in between in form of array of objects e.g. [\n  {\n    \"city\": \"New York\", \n    \"state\": \"New York\",\n    \"zip\": \"10012\", \n    \"arrival\": \"1600\" \n  },\n  {\n    \"city\": \"Philadelphia\", \n    \"state\": \"Pennsylvania\",\n    \"zip\": \"19107\",\n    \"arrival\": \"1800\" \n  },\n  {\n    \"city\": \"Washington D.C.\", \n    \"state\": \"District of Columbia\",\n    \"zip\": \"20001\",\n    \"arrival\": \"2000\" \n  }\n]",
+									"type": "text"
+								},
+								{
+									"key": "destination_city",
+									"value": "Chicago",
+									"description": "City",
+									"type": "text"
+								},
+								{
+									"key": "destination_state",
+									"value": "Illinois",
+									"description": "State",
+									"type": "text"
+								},
+								{
+									"key": "arrival",
+									"value": "2200",
+									"description": "200hrs means 11pm",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_info",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "John Snow",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+!9872341019",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "johnsnow@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "round_trip",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle Available Post",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_post_id",
+									"value": "1",
+									"description": "Date of Availability for the trip",
+									"type": "text"
+								},
+								{
+									"key": "date_available",
+									"value": "23-08-2024",
+									"description": "on demand 0 or scheduled 1",
+									"type": "text"
+								},
+								{
+									"key": "route_type",
+									"value": "1",
+									"description": "City",
+									"type": "text"
+								},
+								{
+									"key": "start_city",
+									"value": "Chicago",
+									"description": "State",
+									"type": "text"
+								},
+								{
+									"key": "start_state",
+									"value": "Illinois",
+									"description": "zip",
+									"type": "text"
+								},
+								{
+									"key": "start_zip",
+									"value": "60008",
+									"description": "1400 hrs means 2pm",
+									"type": "text"
+								},
+								{
+									"key": "departure",
+									"value": "1200",
+									"description": "stops in between in form of array of objects e.g. [\n  {\n    \"city\": \"New York\", \n    \"state\": \"New York\",\n    \"zip\": \"10012\", \n    \"arrival\": \"1600\" \n  },\n  {\n    \"city\": \"Philadelphia\", \n    \"state\": \"Pennsylvania\",\n    \"zip\": \"19107\",\n    \"arrival\": \"1800\" \n  },\n  {\n    \"city\": \"Washington D.C.\", \n    \"state\": \"District of Columbia\",\n    \"zip\": \"20001\",\n    \"arrival\": \"2000\" \n  }\n]",
+									"type": "text"
+								},
+								{
+									"key": "stops",
+									"value": "[{\"city\": \"New York\", \"state\": \"New York\", \"zip\": \"10001\", \"arrival\": \"1700\"}]",
+									"description": "City",
+									"type": "text"
+								},
+								{
+									"key": "destination_city",
+									"value": "Albuquerque",
+									"description": "State",
+									"type": "text"
+								},
+								{
+									"key": "destination_state",
+									"value": "New Mexico",
+									"description": "200hrs means 11pm",
+									"type": "text"
+								},
+								{
+									"key": "arrival",
+									"value": "2200",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "other_info",
+									"value": "Hello",
+									"type": "text"
+								},
+								{
+									"key": "contact_name",
+									"value": "John Snow",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+!9872341019",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "alarmingcivil1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "round_trip",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Vehicle Posts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date_available",
+									"value": "23-08-2024",
+									"description": "Date of Availability for the trip",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "2",
+									"description": "0 any, 1: car and so on",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Chicago",
+									"description": "City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"description": "State",
+									"type": "text"
+								},
+								{
+									"key": "radius",
+									"value": "75",
+									"description": "in miles",
+									"type": "text"
+								},
+								{
+									"key": "post_time",
+									"value": "0",
+									"description": "0: anytime, 1: 30 min and so on",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "60000",
+									"description": "zip code for start point",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"description": "0 if not needed 1 if needed",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "0",
+									"description": "0 if not needed 1 if needed",
+									"type": "text"
+								},
+								{
+									"key": "lift_gate",
+									"value": "0",
+									"description": "0 if not needed 1 if needed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Interested Email",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_post_id",
+									"value": "1",
+									"description": "Vehicle Post ID",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Roger Federer",
+									"description": "Sender Name",
+									"type": "text"
+								},
+								{
+									"key": "from_email",
+									"value": "roger@gmail.com",
+									"description": "Sender Email",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "539-248-6868",
+									"description": "Sender Phone",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Courierboard.com A User showed interest in vehicle post from New York to New Mexico on 22-08-2024",
+									"description": "Subject of Email",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "ZtQ3MjU4Nzk2MDQ2NjU0NjY3NzY2NjY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2Njg2NzY2",
+									"description": "Body/Msg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/sendMail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"sendMail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Multiple",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_post_ids",
+									"value": "[1]",
+									"description": "Ids of all selected records",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/deleteMultiple",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"deleteMultiple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Posts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/fetchByCompany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"fetchByCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Post",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/vehicle-posts/show/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"vehicle-posts",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver Ad Posts",
+			"item": [
+				{
+					"name": "Post A Driver Ad",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "0",
+									"description": "0: Independent, 1: Full Time, 2: Part time, 3: Temporary, 4: Seasonal ",
+									"type": "text"
+								},
+								{
+									"key": "compensation",
+									"value": "12000 - 16000",
+									"description": "Value or Range",
+									"type": "text"
+								},
+								{
+									"key": "compensation_type",
+									"value": "Per Month",
+									"description": "Per Week, Per Day, Per Hour, Per Month or Custom",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_types",
+									"value": "[0,1,2,3]",
+									"description": "Array of Vehicle Types e.g.  \t0=Any, 1 - car, 2 - minivan, 3 - suv, 4 - cargo van, 5 - sprinter, 6 - covered pickup, 7 - 16 ft Box Truck, 8 - and so on till 14 - Tractor Trailer \t",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "1",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "lift_gate",
+									"value": "0",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "tsa_certified",
+									"value": "1",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Chicago",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "60007",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "1",
+									"description": "0: Any, 1: 0-6 mo, 2: 7-12 mo, 3: 13-18 mo, 4: 19-24 mo, 5: more than 24 mo",
+									"type": "text"
+								},
+								{
+									"key": "insurance_coverage",
+									"value": "1200",
+									"description": "amount",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "Hancox Logistics",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "show_company_name",
+									"value": "1",
+									"description": "0: No 1: Yes",
+									"type": "text"
+								},
+								{
+									"key": "ad_title",
+									"value": "Driver Wanted Independent Contractor Chicago With Benefits & Allowances",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "response_info",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "company_logo",
+									"description": "Optional",
+									"type": "file",
+									"src": "postman-cloud:///1ef60752-26cf-41e0-9003-b1bcf71b81a4"
+								},
+								{
+									"key": "contact_email",
+									"value": "red@gmail.com",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "div_id",
+									"value": "929",
+									"description": "Optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update A Driver Ad",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_ad_id",
+									"value": "3",
+									"description": "id of that ad",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"description": "0: Independent, 1: Full Time, 2: Part time, 3: Temporary, 4: Seasonal ",
+									"type": "text"
+								},
+								{
+									"key": "compensation",
+									"value": "12000 - 16000",
+									"description": "Array of Vehicle Types e.g.  \t0=Any, 1 - car, 2 - minivan, 3 - suv, 4 - cargo van, 5 - sprinter, 6 - covered pickup, 7 - 16 ft Box Truck, 8 - and so on till 14 - Tractor Trailer \t",
+									"type": "text"
+								},
+								{
+									"key": "compensation_type",
+									"value": "Per Month",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_types",
+									"value": "[0,1,2,3]",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "reefer",
+									"value": "0",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "hazmat",
+									"value": "1",
+									"description": "0 : No , 1: Yes Required",
+									"type": "text"
+								},
+								{
+									"key": "lift_gate",
+									"value": "0",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "tsa_certified",
+									"value": "1",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Chicago",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"description": "0: Any, 1: 0-6 mo, 2: 7-12 mo, 3: 13-18 mo, 4: 19-24 mo, 5: more than 24 mo",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "60007",
+									"description": "amount",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "1",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "insurance_coverage",
+									"value": "1200",
+									"description": "0: No 1: Yes",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "Hancox Logistics",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "show_company_name",
+									"value": "1",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "ad_title",
+									"value": "Driver Wanted Independent Contractor Chicago With Benefits & Allowances",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "response_info",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "red@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "div_id",
+									"value": "929",
+									"type": "text"
+								},
+								{
+									"key": "company_logo",
+									"type": "file",
+									"src": "postman-cloud:///1ef60752-26cf-41e0-9003-b1bcf71b81a4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Driver Ads",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/allByCompany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"allByCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Single Ad",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/show/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"show",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Recent Ads Paginated",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/showRecent?page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"showRecent"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Driver Ads",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "Chicago",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "60007",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-ads/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-ads",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver Ad Responses",
+			"item": [
+				{
+					"name": "Post A Response",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_ad_id",
+									"value": "1",
+									"description": "ID of driver ad post for which applying",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "John F Kennedy",
+									"description": "Driver Name",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Chicago",
+									"description": "Driver City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"description": "Driver State",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_types",
+									"value": "[0,1,2,3]",
+									"description": "Driver Vehicle",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "john@gmail.com",
+									"description": "Driver Email",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+1987265121",
+									"description": "Driver Phone",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "All the details and bids etc.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-response/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-response",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Received Resonses",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-response/allReceivedByCompany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-response",
+								"allReceivedByCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Sent Resonses",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-response/allSentByCompany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-response",
+								"allSentByCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show one",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_ad_id",
+									"value": "3",
+									"description": "ID of driver ad post for which applying",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "John F Kennedy",
+									"description": "Driver Name",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Chicago",
+									"description": "Driver City",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"description": "Driver State",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_types",
+									"value": "[0,1,2,3]",
+									"description": "Driver Vehicle",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "arslan@gmail.com",
+									"description": "Driver Email",
+									"type": "text"
+								},
+								{
+									"key": "contact_phone",
+									"value": "+1987265121",
+									"description": "Driver Phone",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "All the details and bids etc.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-response/show/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-response",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver Contact List",
+			"item": [
+				{
+					"name": "Add Multiple Responses To List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_response_ids",
+									"value": "[1]",
+									"description": "id of responses you want to add to list",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-list/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-list",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete From List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "list_item_id",
+									"value": "1",
+									"description": "id of item to delete from list",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-list/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-list",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "list_item_id",
+									"value": "1",
+									"description": "id of item to delete from list",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Wanna Talk About Your Proposed Wage",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum dolor sit amet. Et corporis magni non laudantium rerum ab nisi quia ut praesentium itaque ea ullam repudiandae cum possimus rerum. Aut consectetur nihil in tempore praesentium ut unde ipsa eum deleniti sint sit incidunt dolor qui expedita expedita. Et sunt ducimus sed soluta blanditiis sit suscipit veritatis sit unde debitis ad consequatur soluta quo maiores voluptatem quo sequi dolorem!\n\nQui asperiores dignissimos eum itaque omnis sed exercitationem velit qui asperiores dolorum aut error veritatis. Ut commodi commodi ex nostrum laudantium qui eveniet internos aut tenetur voluptatem qui ducimus voluptas. Ad esse debitis ut magnam autem ut sapiente dolores nam consequuntur dicta qui modi omnis. Quo quia officia cum fugit galisum aut distinctio galisum 33 delectus pariatur qui consequatur inventore et facere nisi. ",
+									"type": "text"
+								},
+								{
+									"key": "reply_email",
+									"value": "red@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-list/sendMail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-list",
+								"sendMail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all List Items of Company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/driver-list/allCompanyContactItems",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"driver-list",
+								"allCompanyContactItems"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Classified Ads",
+			"item": [
+				{
+					"name": "Set Screen Name for Author",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "screen_name",
+									"value": "redfox",
+									"description": "id of item to delete from list",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/classified/setScreenName",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classified",
+								"setScreenName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Classified",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location",
+									"value": "Chicago",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Illinois",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "We need merchandiser for our warehouses",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet. Et corporis magni non laudantium rerum ab nisi quia ut praesentium itaque ea ullam repudiandae cum possimus rerum. Aut consectetur nihil in tempore praesentium ut unde ipsa eum deleniti sint sit incidunt dolor qui expedita expedita. Et sunt ducimus sed soluta blanditiis sit suscipit veritatis sit unde debitis ad consequatur soluta quo maiores voluptatem quo sequi dolorem!\n\nQui asperiores dignissimos eum itaque omnis sed exercitationem velit qui asperiores dolorum aut error veritatis. Ut commodi commodi ex nostrum laudantium qui eveniet internos aut tenetur voluptatem qui ducimus voluptas. Ad esse debitis ut magnam autem ut sapiente dolores nam consequuntur dicta qui modi omnis. Quo quia officia cum fugit galisum aut distinctio galisum 33 delectus pariatur qui consequatur inventore et facere nisi.",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "postman-cloud:///1ef60752-26cf-41e0-9003-b1bcf71b81a4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/classified/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classified",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Reply",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classified_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "We can provide you with merchandisers for your warehouses",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Lorem ipsum dolor sit amet. Et corporis magni non laudantium rerum ab nisi quia ut praesentium itaque ea ullam repudiandae cum possimus rerum. Aut consectetur nihil in tempore praesentium ut unde ipsa eum deleniti sint sit incidunt dolor qui expedita expedita. Et sunt ducimus sed soluta blanditiis sit suscipit veritatis sit unde debitis ad consequatur soluta quo maiores voluptatem quo sequi dolorem!\n\nQui asperiores dignissimos eum itaque omnis sed exercitationem velit qui asperiores dolorum aut error veritatis. Ut commodi commodi ex nostrum laudantium qui eveniet internos aut tenetur voluptatem qui ducimus voluptas. Ad esse debitis ut magnam autem ut sapiente dolores nam consequuntur dicta qui modi omnis. Quo quia officia cum fugit galisum aut distinctio galisum 33 delectus pariatur qui consequatur inventore et facere nisi.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/classified/reply",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classified",
+								"reply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Classifieds",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/classified/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classified",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Classified",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/classified/show/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classified",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quote Request Chat & Messages",
+			"item": [
+				{
+					"name": "Send Message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "What can i help you with?",
+									"description": "id of item to delete from list",
+									"type": "text"
+								},
+								{
+									"key": "quote_request_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "receiver_company_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/chat/sendMessage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat",
+								"sendMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chat Thread",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quote_request_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_company_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/chat/getThread",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat",
+								"getThread"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://explorelogicsit.net/drivv/portal/api",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4cGxvcmVsb2dpY3NpdC5uZXQvZHJpdnYvcG9ydGFsL2FwaS9hdXRoL3VzZXIvbG9naW4iLCJpYXQiOjE3MjUwMDM0MzUsImV4cCI6MTcyNjIxMzAzNSwibmJmIjoxNzI1MDAzNDM1LCJqdGkiOiIyaUhKM2o5Qmc3aDFCZkRVIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.bV7m2J4uk1Nx7_pU39TFaroYQi1Y1NzR2BB9Qbmm960",
+			"type": "string"
+		},
+		{
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4cGxvcmVsb2dpY3NpdC5uZXQvZHJpdnYvcG9ydGFsL2FwaS9hdXRoL3VzZXIvbG9naW4iLCJpYXQiOjE3MjQ4NDU5NTAsImV4cCI6MTcyNjA1NTU1MCwibmJmIjoxNzI0ODQ1OTUwLCJqdGkiOiJNbUJiQ3Y2ZUtBVGZ1VXplIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.IhzNc4r4JyZuwrdwWTgiT9h0bCdgMxPKgQ277PZq7aY",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
