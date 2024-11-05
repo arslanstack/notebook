@@ -14,13 +14,9 @@ class UserController extends Controller
         $search_query = $request->input('search_query');
         if ($request->has('search_query') && !empty($search_query)) {
             $query->where(function ($query) use ($search_query) {
-                $query->where('fname', 'like', '%' . $search_query . '%')
-                    ->orWhere('lname', 'like', '%' . $search_query . '%')
+                $query->where('name', 'like', '%' . $search_query . '%')
                     ->orWhere('email', 'like', '%' . $search_query . '%')
-                    ->orWhere('phone', 'like', '%' . $search_query . '%')
-                    ->orWhereHas('company', function ($query) use ($search_query) {
-                        $query->where('name', 'like', '%' . $search_query . '%');
-                    });
+                    ->orWhere('phone', 'like', '%' . $search_query . '%');
             });
             
         }
@@ -29,9 +25,23 @@ class UserController extends Controller
         return view('admin/users/manage_users', $data);
     }
 
-    public function details($id){
-        $data['user'] = User::find($id);
-        $data['company'] = $data['user']->company;
-        return view('admin/users/users_details', $data);
+    public function update_status(Request $request){
+        $user = User::where('id', $request->id)->first();
+
+        if(!$user){
+            return response()->json(['msg' => 'error', 'response' => 'User not found'], 404);
+        }
+        if($user->status == 0){
+            $user->status = 1;
+        }else if($user->status == 1){
+            $user->status = 0;
+        }
+
+        $query = $user->save();
+        if($query){
+            return response()->json(['msg' => 'success', 'response' => 'User status updated successfully'], 200);
+        }
+
+        return response()->json(['msg' => 'error', 'response' => 'User status not updated. Something went wrong.'], 500);
     }
 }

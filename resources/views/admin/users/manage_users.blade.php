@@ -14,11 +14,6 @@
             </li>
         </ol>
     </div>
-    <!-- <div class="col-lg-4 col-sm-4 col-xs-4 text-right">
-        <a class="btn btn-primary text-white t_m_25" href="{{ url('admin/users/add') }}">
-            <i class="fa fa-plus" aria-hidden="true"></i> Add New Users
-        </a>
-    </div> -->
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -29,7 +24,7 @@
                         <div class="form-group row justify-content-end">
                             <div class="col-sm-8">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="search_query" placeholder="Search by Name, Email, Phone, or Company" value="{{ old('search_query', $searchParams['search_query'] ?? '') }}">
+                                    <input type="text" class="form-control" name="search_query" placeholder="Search by Name, Email, or Phone" value="{{ old('search_query', $searchParams['search_query'] ?? '') }}">
                                     <span class="input-group-append">
                                         <button type="submit" class="btn btn-primary">Search</button>
                                     </span>
@@ -45,9 +40,7 @@
                                     <th>User</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Company</th>
                                     <th>Status</th>
-                                    <th>Access</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -56,10 +49,9 @@
                                 @foreach($users as $item)
                                 <tr class="gradeX">
                                     <td>{{ $i++ }}</td>
-                                    <td>{{ $item->fname . ' ' . $item->lname  }}</td>
+                                    <td>{{ $item->name }}</td>
                                     <td>{{$item->email}}</td>
                                     <td>{{$item->phone}}</td>
-                                    <td>{{$item->company->name}}</td>
                                     <td>
                                         @if($item->status == 0)
                                         <span class="label label-danger">Blocked</span>
@@ -70,14 +62,12 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if($item->is_major_user == 0)
-                                        <span class="label label-primary">Sub-user</span>
-                                        @else
-                                        <span class="label label-success">Super-user</span>
+                                        <!-- <a href="{{ url('admin/users/detail') }}/{{ $item->id }}" class="btn btn-primary btn-sm" data-placement="top" title="Details">Details </a> -->
+                                        @if($item->status == 0)
+                                        <button class="btn btn-success btn-sm btn_status" data-show_text="You want to unblock this user?" data-id="{{$item->id}}" data-placement="top" title="Unblock">Unblock</button>
+                                        @elseif($item->status == 1)
+                                        <button class="btn btn-danger btn-sm btn_status" data-show_text="You want to block this user?" data-id="{{$item->id}}" data-placement="top" title="Block">Block</button>
                                         @endif
-                                    </td>
-                                    <td>
-                                        <a href="{{ url('admin/users/detail') }}/{{ $item->id }}" class="btn btn-primary btn-sm" data-placement="top" title="Details">Details </a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -115,108 +105,61 @@
             },
         ]
     });
-    // $(document).on("click", ".btn_update_status", function() {
-    //     var id = $(this).attr('data-id');
-    //     var status = $(this).attr('data-status');
-    //     var show_text = $(this).attr('data-text');
-    //     swal({
-    //             title: "Are you sure?",
-    //             text: show_text,
-    //             type: "warning",
-    //             showCancelButton: true,
-    //             confirmButtonColor: "#DD6B55",
-    //             confirmButtonText: "Yes, please!",
-    //             cancelButtonText: "No, cancel please!",
-    //             closeOnConfirm: false,
-    //             closeOnCancel: true
-    //         },
-    //         function(isConfirm) {
-    //             if (isConfirm) {
-    //                 $(".confirm").prop("disabled", true);
-    //                 $.ajax({
-    //                     url: "{{ url('admin/users/update_statuses') }}",
-    //                     type: 'post',
-    //                     data: {
-    //                         "_token": "{{ csrf_token() }}",
-    //                         'id': id,
-    //                         'status': status
-    //                     },
-    //                     dataType: 'json',
-    //                     success: function(status) {
-    //                         $(".confirm").prop("disabled", false);
-    //                         if (status.msg == 'success') {
-    //                             swal({
-    //                                     title: "Success!",
-    //                                     text: status.response,
-    //                                     type: "success"
-    //                                 },
-    //                                 function(data) {
-    //                                     location.reload();
-    //                                 });
-    //                         } else if (status.msg == 'error') {
-    //                             swal("Error", status.response, "error");
-    //                         }
-    //                     }
-    //                 });
-    //             } else {
-    //                 swal("Cancelled", "", "error");
-    //             }
-    //         });
-    // });
-    // $(document).on("click", ".btn_delete", function() {
-    //     var id = $(this).attr('data-id');
-    //     var show_text = $(this).attr('data-text');
-    //     swal({
-    //             title: "Are you sure?",
-    //             text: show_text,
-    //             type: "warning",
-    //             showCancelButton: true,
-    //             confirmButtonColor: "#DD6B55",
-    //             confirmButtonText: "Yes, Delete!",
-    //             cancelButtonText: "No, Cancel!",
-    //             closeOnConfirm: false,
-    //             closeOnCancel: true
-    //         },
-    //         function(isConfirm) {
-    //             if (isConfirm) {
-    //                 $(".confirm").prop("disabled", true);
-    //                 $.ajax({
-    //                     url: "{{ url('admin/users/delete') }}",
-    //                     type: 'post',
-    //                     data: {
-    //                         "_token": "{{ csrf_token() }}",
-    //                         'id': id,
-    //                     },
-    //                     dataType: 'json',
-    //                     success: function(status) {
-    //                         $(".confirm").prop("disabled", false);
-    //                         if (status.msg == 'success') {
-    //                             swal({
-    //                                     title: "Success!",
-    //                                     text: status.response,
-    //                                     type: "success"
-    //                                 },
-    //                                 function(data) {
-    //                                     location.reload();
-    //                                 });
-    //                         } else if (status.msg == 'error') {
-    //                             swal("Error", status.response, "error");
-    //                         }
-    //                     }
-    //                 });
-    //             } else {
-    //                 swal("Cancelled", "", "error");
-    //             }
-    //         });
-    // });
-    var session = "{{Session::has('success') ? 'true' : 'false'}}";
-    if (session == 'true') {
-        toastr.options = {
-            "closeButton": true,
-            "progressBar": true,
-            "positionClass": "toast-top-right"
+
+    $(document).on("click", ".btn_status", function() {
+        var id = $(this).attr('data-id');
+        var show_text = $(this).attr('data-show_text');
+        var status = 0;
+        if (show_text == 'Block') {
+            status = 0;
+        } else if (show_text == 'Unblock') {
+            status = 1;
         }
-        toastr.success("{{Session::get('success')}}");
-    }
+        swal({
+                title: "Are you sure?",
+                text: show_text,
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, please!",
+                cancelButtonText: "No, cancel please!",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $(".confirm").prop("disabled", true);
+                    $.ajax({
+                        url: "{{ url('admin/users/update_statuses') }}",
+                        type: 'post',
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            'id': id,
+                            'status': status
+                        },
+                        dataType: 'json',
+                        success: function(status) {
+                            $(".confirm").prop("disabled", false);
+                            if (status.msg == 'success') {
+                                swal({
+                                        title: "Success!",
+                                        text: status.response,
+                                        type: "success"
+                                    },
+                                    function(data) {
+                                        location.reload();
+                                    });
+                            } else if (status.msg == 'error') {
+                                swal("Error", status.response, "error");
+                            }
+                        }
+                    });
+                } else {
+                    swal("Cancelled", "", "error");
+                }
+            }
+        );
+        
+    });
 </script>
 @endpush

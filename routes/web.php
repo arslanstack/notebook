@@ -54,6 +54,7 @@ Route::group(['prefix'  =>  'admin'], function () {
 		
 		Route::group(['prefix'  =>  'users'], function () {
 			Route::get('/', [UserController::class, 'index']);
+			Route::post('/update_statuses', [UserController::class, 'update_status']);
 			Route::get('detail/{id}', [UserController::class, 'details']);
 		});
 	});
